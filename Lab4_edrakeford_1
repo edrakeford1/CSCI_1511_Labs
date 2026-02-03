@@ -1,0 +1,44 @@
+
+"""
+
+Program Name: Lab 4 - Deal Cards
+
+Name: Elijah Drakeford
+
+Purpose: To simulate the dealing of cards
+
+Date: Feb 3, 2026
+
+"""
+
+import random
+
+# Asking how many cards to be dealt
+num_cards = int(input("How many cards should be dealt?: "))
+
+# Assigning card values and suits
+values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
+suits = ['c', 'h', 's', 'd']
+deck = []
+
+# creating entire deck of cards
+for value in values:
+   for suit in suits:
+       deck.append(f"{value}{suit}")
+
+# checking if input is correct
+if num_cards < 1 or num_cards > 52:
+    hand = ("Invalid input")
+
+# dealing hand without duplicates
+else:
+    hand = random.sample(deck, num_cards)
+
+# printing the hand as well as how many cards were requested to be dealt
+print("\nThis is your hand:",hand)
+print("\nYou requested",num_cards, "cards to be dealt.")
+
+
+
+
+
